@@ -1,0 +1,8 @@
+INPUT_FILE = abc.png
+OUTPUT_FILE = abc2.png
+READER = com.reader.Reader
+WRITER = com.writer.Writer
+EXECUTOR = com.executor.Executor
+READER_CONFIG = configs/configReader.txt
+WRITER_CONFIG = configs/configWriter.txt
+EXECUTOR_CONFIG = configs/configExecutor.txt

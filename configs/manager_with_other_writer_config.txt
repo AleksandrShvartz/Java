@@ -1,0 +1,16 @@
+# Этот конфиг для пайплайна с чужим врайтером (Артура)
+
+input_file = test_files/MeTest.jpg      # Задаем файл, который должен быть обработан
+output_file = test_files/MeFromPipe.jpg     # Задаем файл, в который запишется результат
+reader_config_file = configs/reader_config.txt      # Задаем файл конфига для ридера
+writer_config_file = configs/Fayzrahmanov/configWriter.txt      # Задаем файл конфига для врайтера
+reader_class = java_polytech.leo.reader.Reader      # Задаем класс ридера
+writer_class = com.writer.Writer        # Задаем класс врайтера (чужой)
+
+# executor_class_list задает список экзекьюторов, которые будут на конвейере
+# Порядок выполнения экзекюторов зависит от того в каком порядке вы его задали здесь
+executor_class_list = java_polytech.leo.executor.Executor, java_polytech.leo.executor.Executor, com.executor.Executor, com.executor.Executor
+
+# executor_config_file_list задает конфиги,
+# соответствующие экзекьюторам (1й конфиг соответствует первому экзекьютору)
+executor_config_file_list = configs/executor_coding_config.txt, configs/executor_decoding_config.txt, configs/Fayzrahmanov/configExecutorCoding.txt, configs/Fayzrahmanov/configExecutorDecoding.txt

@@ -1,0 +1,16 @@
+# Simple manager config. 2 my executors in pipeline, one with coding config
+# and one with decoding
+input_file = test_files/Test.txt    # Задаем файл, который должен быть обработан
+output_file = test_files/TestFromPipe.txt       # Задаем файл, в который запишется результат
+reader_config_file = configs/reader_config.txt      # Задаем файл конфига для ридера
+writer_config_file = configs/writer_config.txt      # Задаем файл конфига для врайтера
+reader_class = java_polytech.leo.reader.Reader      # Задаем класс ридера
+writer_class = java_polytech.leo.writer.Writer      # Задаем класс врайтера
+
+# executor_class_list задает список экзекьюторов, которые будут на конвейере
+# Порядок выполнения экзекюторов зависит от того в каком порядке вы его задали здесь
+executor_class_list = java_polytech.leo.executor.Executor, java_polytech.leo.executor.Executor
+
+# executor_config_file_list задает конфиги,
+# соответствующие экзекьюторам (1й конфиг соответствует первому экзекьютору)
+executor_config_file_list = configs/executor_coding_config.txt, configs/executor_decoding_config.txt
